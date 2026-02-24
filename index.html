@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>BLUE RUSH | ATUL KHANDARE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body oncontextmenu="return false;">
+    <div id="game-container"></div>
+
+    <div class="hud-top">
+        <div class="glass">
+            <div class="label">SCORE</div>
+            <div id="score-txt">000</div>
+        </div>
+        <div class="glass">
+            <div id="speed-val">0</div>
+            <div class="label">KM/H</div>
+        </div>
+    </div>
+
+    <div class="ui-controls">
+        <div class="steering-group">
+            <button id="btn-left" class="circle-btn">◀</button>
+            <button id="btn-right" class="circle-btn">▶</button>
+        </div>
+        <div class="pedal-group">
+            <button id="btn-brake" class="pedal brk">BRAKE</button>
+            <button id="btn-gas" class="pedal gas">GAS</button>
+        </div>
+    </div>
+
+    <div id="start-screen" class="overlay">
+        <h1 class="glitch">BLUE RUSH</h1>
+        <button id="start-btn" class="main-btn">INITIATE MISSION</button>
+        <p class="small-credit">Developed by Atul Khandare</p>
+    </div>
+
+    <div id="over-screen" class="overlay hidden">
+        <h1 class="glitch" style="color:#ff0055; font-size: 10vw;">CRASHED</h1>
+        <div class="mission-box">
+            <p class="mission-label">FINAL SCORE</p>
+            <h2 id="final-score">0</h2>
+            <p class="mini-name"></p>
+        </div>
+        <button onclick="location.reload()" class="main-btn" style="padding: 12px 30px;">REBOOT</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
